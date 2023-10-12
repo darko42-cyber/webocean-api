@@ -38,7 +38,7 @@ app.use((err, req, res, next) => {
 
   return res.status(errorStatus).send(errorMessage);
 });
-app.listen(5000, async () => {
+app.listen(process.env.PORT, async () => {
   await connect();
   console.log("Backend server is running!");
 });
