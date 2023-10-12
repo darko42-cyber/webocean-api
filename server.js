@@ -22,7 +22,7 @@ const connect = async () => {
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://webocean.onrender.com",
     credentials: true,
   })
 );
