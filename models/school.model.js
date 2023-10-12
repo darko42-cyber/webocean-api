@@ -28,8 +28,8 @@ const schoolSchema = new Schema(
       required: true,
     },
     phone: {
-      type: String,
-      required: false,
+      type: Number,
+      required: true,
     },
   },
   {
