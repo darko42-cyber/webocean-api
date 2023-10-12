@@ -20,12 +20,7 @@ const connect = async () => {
   }
 };
 
-app.use(
-  cors({
-    origin: "https://webocean.onrender.com",
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
