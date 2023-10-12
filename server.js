@@ -24,6 +24,9 @@ app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
+app.get("/hello", (req, res) => {
+  res.send({ name: Emma, age: 23 });
+});
 app.use("/api/auth", authRoute);
 
 app.use((err, req, res, next) => {
