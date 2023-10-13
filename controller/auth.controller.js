@@ -4,10 +4,13 @@ import SchoolModel from "../models/school.model.js";
 import jwt from "jsonwebtoken";
 import createError from "../utils/createError.js";
 export const register = async (req, res, next) => {
+  const { school_name } = req.body;
+  let school = school_name.toUpperCase();
   try {
     const hash = bcrypt.hashSync(req.body.password, 10);
     const newSchool = new SchoolModel({
       ...req.body,
+      school_name: school,
       password: hash,
     });
     const token = jwt.sign(
